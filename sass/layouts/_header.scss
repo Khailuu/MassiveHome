@@ -1,0 +1,39 @@
+header {
+    .header {
+        display: flex;
+        background-color: $clr-nav-bg-mob;
+        justify-content: space-between;
+        padding: 0 $fs-1 + 4px;
+        align-items: center;
+        .header__logo {
+            img {
+                height: $fs-3 + 36px;
+            }
+        }
+        .header__nav {
+            ul {
+                margin-bottom: 0;
+                display: flex;
+                li {
+                    list-style: none;
+                    a {
+                        color: $clr-dark-bg-txt;
+                        padding: 0 $p-4;
+                        font-size: $fs-nav;
+                        text-transform: uppercase;
+                        transition: all .5s;
+                    }
+                    &:hover a {
+                        color: $clr-second;
+                        text-decoration: none;
+                    }
+                    & {
+                        .active {
+                            color: $clr-second;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

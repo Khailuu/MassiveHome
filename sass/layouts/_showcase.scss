@@ -1,0 +1,120 @@
+.showcase {
+    padding-bottom: 0;
+    .showcase__title {
+        h2 {
+            font-size: $fs-0 + 4;
+            letter-spacing: $ls-3 + 1;
+            font-weight: $fw-def;
+        }
+        p {
+            width: 60%;
+            margin: 0 auto;
+            line-height: $lh-des;
+            color: $clr-des-txt;
+            font-size: $fs-def;
+        }
+    }
+    .showcase__content {
+        ul {
+            justify-content: center;
+            li {
+                line-height: $lh-3 - 5;
+                .nav-link {
+                    font-size: $fs-tab;
+                    color: $cLr-tab-txt;
+                    text-transform: uppercase;
+                    letter-spacing: 3px;
+                    padding: 0;
+                    margin: 0 $m-5;
+                    cursor: pointer;
+                    &.active {
+                        background-color: transparent;
+                        color: $clr-pro-bar-txt;
+                    }
+                }
+            }
+        }
+        .show {
+            padding: 0;
+            .showcase__photo {
+                position: relative;
+                padding: 0;
+                img {
+                    width: 100%;
+                }
+                .showcase__info {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: $cLr-show-info-bg;
+                    border: $fs-0 solid $cLr-show-info-bdr;
+                    justify-content: center;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    opacity: 0;
+                    transition: all 0.5s;
+                    .showcase__btn {
+                        font-size: $fs-show-i;
+                        transform: translateY(-110%);
+                        transition: all 0.5s;
+                        a {
+                            color: $clr-pro-bar-txt;
+                            text-decoration: none;
+                            transition: all 0.3s;
+                            &:hover {
+                                color: $clr-second;
+                            }
+                        }
+                    }
+                    .showcase__des {
+                        text-align: center;
+                        transform: translateY(70%);
+                        transition: all 0.5s;
+                        h4 {
+                            a {
+                                @include textStyle($fs-tab, $fw-def, $clr-pro-bar-txt);
+                                text-transform: uppercase;
+                                letter-spacing: $ls-2;
+                                text-decoration: none;
+                                transition: all 0.3s;
+                                &:hover {
+                                    color: $clr-second;
+                                }
+                            }
+                        }
+                        p {
+                            a {
+                                @include textStyle($fs-tab - 2, $fw-0, $cLr-show-info-p);
+                                text-transform: uppercase;
+                                letter-spacing: $ls-2;
+                                text-decoration: none;
+                                transition: all 0.3s;
+                                line-height: $lh-0;
+                                &:hover {
+                                    color: $clr-second;
+                                }
+                            }
+                        }
+                    }
+                }
+                &:hover {
+                    .showcase__info {
+                        opacity: 1;
+                        .showcase__btn {
+                            transform: translateY(0);
+                        }
+                        .showcase__des {
+                            transform: translateY(20%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+

@@ -1,0 +1,145 @@
+.skills {
+    background-image: url(../imgs/skills.jpeg);
+    // height: 100vh;
+    padding: 0;
+    @extend %background-img;
+    .skills__overlay {
+        padding: $p-num 0;
+        background: linear-gradient(to right, transparent 0%, transparent 50%, $clr-skills-overlay-bg 0%, $clr-skills-overlay-bg 50%);
+        width: 100%;
+        height: 100%;
+    }
+    .skills__content {
+        .skills__title {
+            display: flex;
+            align-items: center;
+            height: 400px;
+            color: $clr-dark-bg-txt;
+            justify-content: center;
+            h2 {
+                font-size: $fs-0 + 4;
+                letter-spacing: $ls-3 + 1;
+                font-weight: $fw-def;
+            }
+        }
+        .skills__des {
+            h3 {
+                font-size: $fs-title-small;
+                margin-bottom: $m-9;
+                font-weight: $fw-def;
+                color: $clr-dark-bg-txt;
+                letter-spacing: $ls-1;
+            }
+            & > p {
+                color: $clr-dark-bg-txt;
+                line-height: $lh-0;
+                margin-bottom: $m-9;
+                font-size: $fs-def;
+            }
+        }
+        .skills__des {
+            padding: 0 $p-11 + 5;
+            .skills__progress {
+                padding-top: $p-9;
+                .progressBar {
+                    background-color: $clr-pro-bar-bg;
+                    height: 20px;
+                    margin: $m-3 0 $m-9 + 20 0;
+                    position: relative;
+                    &:first-child .progressBar__run {
+                        width: 80%;
+                        background-color: $clr-dark-bg-txt;
+                        height: 100%;
+                        .progressBar__counter {
+                            position: absolute;
+                            content: "";
+                            min-width: 25px;
+                            border-radius: $bsha-2;
+                            background-color: $clr-num-pro-bar-bg;
+                            top: -23px;
+                            right: 72px;
+                            font-size: $fs-pro-bar;
+                            padding: 0 $p-2;   
+                        }
+                        .progressBar__counter::after {
+                            position: absolute;
+                            content: "";
+                            bottom: -7px;
+                            left: 16px;
+                            display: inline-block;
+                            border-style: solid;
+                            border-color: transparent;
+                            border-width: 3.5px;
+                            border-top-color: #a4a4a4;
+                        }
+                    }
+                    p {
+                        position: absolute;
+                        font-size: $fs-pro-bar;
+                        padding-left: $p-3;
+                        letter-spacing: $ls-0;
+                        line-height: $lh-nav-mob;
+                        top: 0;
+                    }
+                    &:nth-child(2) .progressBar__run {
+                        width: 90%;
+                        background-color: $clr-dark-bg-txt;
+                        height: 100%;
+                        .progressBar__counter {
+                            position: absolute;
+                            content: "";
+                            min-width: 25px;
+                            border-radius: $bsha-2;
+                            background-color: $clr-num-pro-bar-bg;
+                            top: -23px;
+                            right: 27px;
+                            font-size: $fs-pro-bar;
+                            padding: 0 $p-2;   
+                        }
+                        .progressBar__counter::after {
+                            position: absolute;
+                            content: "";
+                            bottom: -7px;
+                            left: 16px;
+                            display: inline-block;
+                            border-style: solid;
+                            border-color: transparent;
+                            border-width: 3.5px;
+                            border-top-color: #a4a4a4;
+                        }
+                    }
+                    &:last-child .progressBar__run {
+                        width: 75%;
+                        background-color: $clr-dark-bg-txt;
+                        height: 100%;
+                        .progressBar__counter {
+                            position: absolute;
+                            content: "";
+                            min-width: 25px;
+                            border-radius: $bsha-2;
+                            background-color: $clr-num-pro-bar-bg;
+                            top: -23px;
+                            right: 95px;
+                            font-size: $fs-pro-bar;
+                            padding: 0 $p-2;   
+                        }
+                        .progressBar__counter::after {
+                            position: absolute;
+                            content: "";
+                            bottom: -7px;
+                            left: 16px;
+                            display: inline-block;
+                            border-style: solid;
+                            border-color: transparent;
+                            border-width: 3.5px;
+                            border-top-color: #a4a4a4;
+                        }   
+                    }
+                    .progressBar__run {
+                        
+                    }
+                }
+            }
+        }
+    }
+}

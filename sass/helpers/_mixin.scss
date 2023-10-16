@@ -1,0 +1,18 @@
+@mixin textStyle($fs, $fw, $clr){
+    font-size: $fs;
+    font-weight: $fw;
+    color: $clr;
+}
+@mixin textStyle1($fs, $clr, $ls, $mb) {
+    font-size: $fs;
+    color: $clr;
+    letter-spacing: $ls;
+    margin-bottom: $mb;
+    text-transform: uppercase;
+}
+@mixin textStyle2($fs, $clr, $lh)
+{
+    font-size: $fs;
+    color: $clr;
+    line-height: $lh;
+}

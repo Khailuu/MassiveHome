@@ -1,0 +1,23 @@
+.banner {
+    background-image: url(../imgs/banner.jpeg);
+    height: 100vh;
+    @extend %background-img;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .banner__content {
+        text-align: center;
+        color: $clr-dark-bg-txt;
+        h1{
+            font-size: $fs-3;
+            font-weight: $fw-0;
+            line-height: normal;
+            letter-spacing: $ls-3;
+        }
+        h2{
+            font-size: $fs-0;
+            font-weight: $fw-def;
+            letter-spacing: $ls-3 + 1;
+        }
+    }
+}
