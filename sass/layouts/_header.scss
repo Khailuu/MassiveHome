@@ -1,53 +1,184 @@
 header {
-    position: sticky;
-    z-index: 999;
-    top: 0;
-    left: 0;
-    .header {
-        display: flex;
-        background-color: $clr-nav-bg-mob;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    box-shadow: 0 $bsha-0 $bsha-0 $clr-nav-bsha-mob;
+    .massiveNavbar {
         justify-content: space-between;
-        padding: 0 $fs-1 + 4px;
-        align-items: center;
-
-        .header__logo {
+        background-color: $clr-nav-bg-mob;
+        padding: 0 $p-9;
+        transition: all 0.3s ease;
+        overflow: hidden;
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            height: 50px;
+            padding: 0;
+            margin-right: $m-9;
             img {
-                height: $fs-3 + 36px;
+                display: inline-block;
+                height: 50px;
+                padding: $p-0 0;
+                transition: all 0.3s;
             }
         }
-        .header__nav {
-            ul {
-                margin-bottom: 0;
+        .navbar-toggler {
+            padding: $p-3 + 0.5px 0;
+            i {
+                @include textStyle2($fs-0 + 3, $clr-dark-bg-txt);
+            }
+            &:focus {
+                box-shadow: none;
+            }
+        }
+        .navbar-collapse {
+            background-color: $clr-dark-bg-txt;
+            flex-grow: 0;
+            .nav-item,
+            .nav-divider {
+                margin-left: $m-0;
+            }
+            .nav-link {
                 display: flex;
-                li {
-                    list-style: none;
-                    a {
-                        color: $clr-dark-bg-txt;
-                        padding: 0 $p-4;
-                        font-size: $fs-nav;
-                        text-transform: uppercase;
-                        transition: all 0.5s;
-                    }
-                    &:hover a {
+                justify-content: space-between;
+                align-items: center;
+                border-top: 1px solid $clr-nav-bdr-mob-1;
+                @include textStyle1($fs-nav, $fw-def, $clr-nav-txt-mob);
+                text-transform: uppercase;
+                letter-spacing: calc($ls-0 / 2);
+                padding: 0 0 0 $p-7;
+                i {
+                    font-size: $fs-show-categ;
+                    margin-right: $m-1;
+                }
+                &.active,
+                &:focus,
+                &:hover {
+                    color: $clr-second;
+                }
+                span {
+                    border-left: 1px solid $clr-nav-bdr-mob-2;
+                    font-size: $fs-0 + 2;
+                    text-align: center;
+                    padding: $p-1 + 0.5 $p-8;
+                }
+            }
+            .nav-item:last-child .nav-link {
+                border-bottom: 1px solid $clr-nav-bdr-mob-1;
+            }
+        }
+    }
+
+    // RESPONSIVE
+    @media screen and (max-height: 414px) {
+        .massiveNavbar {
+            .navbar-brand {
+                img {
+                    height: 46px;
+                }
+            }
+            .navbar-collapse {
+                .nav-link {
+                    line-height: 29px;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 769px) {
+        box-shadow: none;
+        .massiveNavbar {
+            &.resize-header {
+                height: 100px;
+                background-color: transparent;
+                &.sz-top--is-visible {
+                    height: 60px;
+                    background-color: $clr-nav-bg-mob;
+                }
+            }
+            .navbar-brand {
+                height: 100%;
+                margin-right: 0;
+            }
+            .navbar-collapse {
+                background-color: transparent;
+                .nav-link {
+                    display: block;
+                    border: none;
+                    color: $clr-dark-bg-txt;
+                    &.active,
+                    &:focus,
+                    &:hover {
                         color: $clr-second;
-                        text-decoration: none;
                     }
-                    & {
-                        .active {
-                            color: $clr-second;
-                        }
-                    }
-                    i {
-                        margin-right: $m-1;
+                    span {
+                        border: none;
+                        font-size: $fs-nav;
+                        padding: 0;
+                        margin-left: $m-0 + 1;
                     }
                 }
+                .nav-item:last-child .nav-link {
+                    border: none;
+                }
+                .nav-divider {
+                    @include textStyle2($fs-nav, $clr-dark-bg-txt);
+                    text-align: center;
+                    padding-left: $p-7;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 788px) {
+        .massiveNavbar {
+            padding: 0 $p-7;
+        }
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 991.98px) {
+        .massiveNavbar {
+            .navbar-collapse {
+                .nav-link {
+                    i {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    @include responsiveMobileFirst("large") {
+        .massiveNavbar {
+            &.resize-header {
+                .navbar-brand {
+                    img {
+                        height: 96px;
+                    }
+                }
+                &.sz-top--is-visible {
+                    .navbar-brand {
+                        img {
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+            .navbar-collapse {
+                .nav-link,
                 .nav-divider {
                     padding: 0 $p-4;
-                    p {
-                        color: $clr-dark-bg-txt;
-                        font-size: $fs-nav;
-                        text-align: center;
-                        margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 992px) and (max-width: 1021.98px) {
+        .massiveNavbar {
+            &.resize-header {
+                .navbar-brand {
+                    img {
+                        height: 70px;
                     }
                 }
             }

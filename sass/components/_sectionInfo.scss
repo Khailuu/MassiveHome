@@ -1,4 +1,4 @@
-.section__info {
+.section-info {
     text-align: center;
     margin-bottom: $m-sect-info;
     h2 {
@@ -6,8 +6,6 @@
         text-transform: uppercase;
         padding-bottom: $p-3;
         margin-bottom: $m-7;
-        font-size: $fs-0 + 4;
-        letter-spacing: $ls-1; 
         &::after {
             content: "";
             position: absolute;
@@ -24,5 +22,12 @@
         margin: auto;
         line-height: $lh-des;
         color: $clr-des-txt;
+    }
+
+    // RESPONSIVE
+    @include responsiveMobileFirst("medium") {
+        p {
+            width: 60%;
+        }
     }
 }

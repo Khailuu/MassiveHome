@@ -6,6 +6,8 @@
 
 @import './base/reset';
 
+@import './components/button';
+@import './components/progressBar';
 @import './components/sectionInfo';
 
 @import './layouts/header';
@@ -22,3 +24,4 @@
 @import './layouts/partner';
 @import './layouts/footer';
 @import './layouts/copyright';
+@import './layouts/backToTop';
