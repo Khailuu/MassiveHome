@@ -49,17 +49,17 @@
                 text-align: center;
                 .team__text {
                     transform: translateY(-170%);
-                    transition: all .5s;
+                    transition: all 0.5s;
                     padding: 0 $p-7;
                     h3 {
                         @include textStyle1($fs-show-categ, $clr-pro-bar-txt, $ls-1 + 2, $m-8);
                     }
                     p {
-                        @include textStyle2($fs-show-categ, $clr-des-txt, $lh-0)
+                        @include textStyle2($fs-show-categ, $clr-des-txt, $lh-0);
                     }
                 }
                 .team__social {
-                    transition: all .5s;
+                    transition: all 0.5s;
                     transform: translateY(500%);
                     a {
                         font-size: $fs-team-i;
@@ -74,7 +74,48 @@
                     transform: translateY(-30%);
                 }
                 .team__social {
-                    transform:  translateY(300%);
+                    transform: translateY(300%);
+                }
+            }
+        }
+        .team__promo {
+            margin-top: $m-10;
+            padding: $p-11;
+            background-color: $clr-nav-bdr-mob-2;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .team__promo-info {
+                width: 75%;
+                h3 {
+                    @include textStyle3($fs-title-small, $clr-nav-txt-mob, $lh-def, $ls-1, $fw-def);
+                }
+                p {
+                    font-size: $fs-def;
+                    color: $clr-des-txt;
+                    margin-top: $m-3;
+                }
+            }
+            .team__promo-btn {
+                button {
+                    background-color: $clr-pro-bar-txt;
+                    border: 1px solid transparent;
+                    padding: $p-5 $p-9;
+                    color: $clr-dark-bg-txt;
+                    font-size: $fs-tab;
+                    text-transform: uppercase;
+                    border-radius: 0;
+                    transition: all .4s;
+                    &:hover {
+                        background-color: $clr-second;
+                    }
+                    &:focus {
+                        box-shadow: none;
+                    }
+                    &:active {
+                        background-color: $clr-second;
+                    }
+                    
                 }
             }
         }

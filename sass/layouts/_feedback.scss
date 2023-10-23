@@ -1,0 +1,35 @@
+.feedback {
+    border-bottom: 1px solid rgba(238, 238, 238, 0.9333333333);
+    .container {
+        
+        .feedback__content {
+            width: 60%;
+            margin: 0 auto;
+            text-align: center;
+            .feedback__thumb {
+                img {
+                    width: 100px;
+                    border-radius: 50%;
+                    display: inline-block;
+                    margin-bottom: $m-7;
+                }
+            }
+            .feedback__comment {
+                margin-bottom: $m-9;
+                @include textStyle2($fs-team-i, $clr-des-txt, $lh-0);
+                font-style: italic;
+            }
+            .feedback__user {
+                margin-top: $m-3;
+                text-transform: uppercase;
+                letter-spacing: $ls-1;
+                p {
+                    &:first-child {
+                        font-size: $fs-tab;
+                        color: $clr-pro-bar-txt;
+                    }
+                }
+            }
+        }
+    }
+}

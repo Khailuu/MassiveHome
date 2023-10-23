@@ -21,6 +21,10 @@
       referrerpolicy="no-referrer"
     />
 
+    <!-- Owl carousel  -->
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css" />
+
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -28,47 +32,70 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-
+    <link rel="stylesheet" href="./css/magnific-popup.css" />
     <!-- Main css -->
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
     <header>
       <div class="container-fluid header">
-        <div class="header__logo">
-          <img src="./imgs/massive-logo.png" alt="logo" />
-        </div>
-        <div class="header__nav">
-          <ul>
-            <li>
-              <a class="active" href="#"> Home + </a>
-            </li>
-            <li>
-              <a href="#"> Pages + </a>
-            </li>
-            <li>
-              <a href="#"> Features + </a>
-            </li>
-            <li>
-              <a href="#"> Portfolio + </a>
-            </li>
-            <li>
-              <a href="#"> Blog + </a>
-            </li>
-            <li>
-              <a href="#"> Shortcodes + </a>
-            </li>
-            <li>
-              <a href="#"> Shop + </a>
-            </li>
-            <li>
-              <a href="#"> Cart + </a>
-            </li>
-            <li>
-              <a href="#"> Search + </a>
-            </li>
-          </ul>
-        </div>
+        <nav class="navbar navbar-expand-lg">
+          <a class="navbar-brand header__logo" href="#">
+            <img src="./imgs/massive-logo.png" alt="logo" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="active" href="#"> Home + </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Pages + </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Features + </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Portfolio + </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Blog + </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Shortcodes + </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Shop + </a>
+              </li>
+              <li class="nav-item" class="nav-divider">
+                <p>|</p>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="fa fa-shopping-cart"></i>
+                  Cart(2) +
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="fa fa-search"></i>
+                  Search +
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        
       </div>
     </header>
 
@@ -154,19 +181,19 @@
                   always up for a massive challenge forever.
                 </p>
                 <div class="skills__progress">
-                  <div class="progressBar active">
+                  <div class="progressBar">
                     <div class="progressBar__run">
                       <span class="progressBar__counter">80%</span>
                     </div>
                     <p class="progressBar__text">HTML / CSS / JQUERY</p>
                   </div>
-                  <div class="progressBar active">
+                  <div class="progressBar">
                     <div class="progressBar__run">
                       <span class="progressBar__counter">90%</span>
                     </div>
                     <p class="progressBar__text">PHOTOSHOP</p>
                   </div>
-                  <div class="progressBar active">
+                  <div class="progressBar">
                     <div class="progressBar__run">
                       <span class="progressBar__counter">75%</span>
                     </div>
@@ -194,51 +221,28 @@
         </div>
       </div>
       <div class="showcase__content">
-        <ul class="filter-nav massiveShowcase nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <ul
+          class="filter-nav massiveShowcase nav nav-pills mb-3"
+          id="pills-tab"
+          role="tablist"
+        >
           <li class="nav-item">
-            <a
-              class="nav-link active"
-              data-filter="*"
-              >All</a
-            >
+            <a class="nav-link active" data-filter="*">All</a>
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link"
-              data-filter=".printing"
-              
-              >Printing</a
-            >
+            <a class="nav-link" data-filter=".printing">Printing</a>
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link"
-              data-filter=".web"
-              >Web</a
-            >
+            <a class="nav-link" data-filter=".web">Web</a>
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link"
-              data-filter=".illustration"
-              
-              >Illustration</a
-            >
+            <a class="nav-link" data-filter=".illustration">Illustration</a>
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link"
-              data-filter=".media"
-              
-              >Media</a
-            >
+            <a class="nav-link" data-filter=".media">Media</a>
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link"
-              data-filter=".crafts"
-              >Crafts</a
-            >
+            <a class="nav-link" data-filter=".crafts">Crafts</a>
           </li>
         </ul>
         <div class="tab-content">
@@ -260,7 +264,7 @@
                     <a
                       class="popup-link"
                       title="Lightbox View"
-                      href="./img/showcase-1.jpeg"
+                      href="./imgs/showcase-1.jpeg"
                       >lightbox view</a
                     >
                   </h4>
@@ -287,7 +291,7 @@
                     <a
                       class="popup-link"
                       title="Lightbox View"
-                      href="./img/showcase-2.jpeg"
+                      href="./imgs/showcase-2.jpeg"
                       >External link</a
                     >
                   </h4>
@@ -316,7 +320,7 @@
                     <a
                       class="popup-link"
                       title="Lightbox View"
-                      href="./img/showcase-3.jpeg"
+                      href="./imgs/showcase-3.jpeg"
                       >lightbox view</a
                     >
                   </h4>
@@ -370,7 +374,7 @@
                     <a
                       class="popup-link"
                       title="Lightbox View"
-                      href="./img/showcase-5.jpeg"
+                      href="./imgs/showcase-5.jpeg"
                       >lightbox view</a
                     >
                   </h4>
@@ -395,7 +399,7 @@
                     <a
                       class="popup-link"
                       title="Lightbox View"
-                      href="./img/showcase-6.jpeg"
+                      href="./imgs/showcase-6.jpeg"
                       >External link</a
                     >
                   </h4>
@@ -422,7 +426,7 @@
                     <a
                       class="popup-link"
                       title="Lightbox View"
-                      href="./img/showcase-7.jpeg"
+                      href="./imgs/showcase-7.jpeg"
                       >lightbox view</a
                     >
                   </h4>
@@ -432,7 +436,9 @@
                 </div>
               </div>
             </div>
-            <div class="showcase__photo col-3 printing media illustration crafts">
+            <div
+              class="showcase__photo col-3 printing media illustration crafts"
+            >
               <img src="./imgs/showcase-8.jpeg" alt="Showcase photo 1" />
               <div class="showcase__info">
                 <div class="showcase__btn">
@@ -449,7 +455,7 @@
                     <a
                       class="popup-link"
                       title="Lightbox View"
-                      href="./img/showcase-8.jpeg"
+                      href="./imgs/showcase-8.jpeg"
                       >lightbox view</a
                     >
                   </h4>
@@ -462,26 +468,28 @@
               </div>
             </div>
           </div>
-          
         </div>
       </div>
     </section>
+    <div class="clearfix"></div>
 
     <!-- Team  -->
     <section class="team section-padding">
       <div class="container">
         <div class="section__info">
           <h2>we have a fabulous team</h2>
-          <p>We are a team of multi-skilled and curious digital specialists who are always up for a challenge and learning
-            as fast as digital is changing. We are a team of multi-skilled and curious digital specialists who are always
-            up for a challenge.
+          <p>
+            We are a team of multi-skilled and curious digital specialists who
+            are always up for a challenge and learning as fast as digital is
+            changing. We are a team of multi-skilled and curious digital
+            specialists who are always up for a challenge.
           </p>
         </div>
         <div class="team__content row">
           <div class="col-12 col-lg-4">
             <div class="team__item">
               <div class="team__photo">
-                <img src="./imgs/team-member-1.jpeg" alt="Team member 1">
+                <img src="./imgs/team-member-1.jpeg" alt="Team member 1" />
                 <div class="team__name">
                   <h3>Martin Smith</h3>
                   <p>founder &amp; ceo</p>
@@ -490,8 +498,11 @@
               <div class="team__info">
                 <div class="team__text">
                   <h3>I love my Studio</h3>
-                  <p>We are a team of multi-skilled and curious digital specialists who are always up for a challenge and
-                    learning as fast as digital is changing.</p>
+                  <p>
+                    We are a team of multi-skilled and curious digital
+                    specialists who are always up for a challenge and learning
+                    as fast as digital is changing.
+                  </p>
                 </div>
                 <div class="team__social">
                   <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -504,7 +515,7 @@
           <div class="col-12 col-lg-4">
             <div class="team__item">
               <div class="team__photo">
-                <img src="./imgs/team-member-2.jpeg" alt="Team member 2">
+                <img src="./imgs/team-member-2.jpeg" alt="Team member 2" />
                 <div class="team__name">
                   <h3>Franklin Harbet</h3>
                   <p>HR Manager</p>
@@ -513,8 +524,11 @@
               <div class="team__info">
                 <div class="team__text">
                   <h3>Connecting People</h3>
-                  <p>We are a team of multi-skilled and curious digital specialists who are always up for a challenge and
-                    learning as fast as digital is changing.</p>
+                  <p>
+                    We are a team of multi-skilled and curious digital
+                    specialists who are always up for a challenge and learning
+                    as fast as digital is changing.
+                  </p>
                 </div>
                 <div class="team__social">
                   <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -527,7 +541,7 @@
           <div class="col-12 col-lg-4">
             <div class="team__item">
               <div class="team__photo">
-                <img src="./imgs/team-member-3.jpeg" alt="Team member 3">
+                <img src="./imgs/team-member-3.jpeg" alt="Team member 3" />
                 <div class="team__name">
                   <h3>Linda Anderson</h3>
                   <p>Marketing Manager</p>
@@ -536,8 +550,11 @@
               <div class="team__info">
                 <div class="team__text">
                   <h3>Network Builder</h3>
-                  <p>We are a team of multi-skilled and curious digital specialists who are always up for a challenge and
-                    learning as fast as digital is changing.</p>
+                  <p>
+                    We are a team of multi-skilled and curious digital
+                    specialists who are always up for a challenge and learning
+                    as fast as digital is changing.
+                  </p>
                 </div>
                 <div class="team__social">
                   <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -551,12 +568,696 @@
             <div class="team__item team__promo">
               <div class="team__promo-info">
                 <h3>we are <span>hiring</span></h3>
-                <p>Nullam ut consectetur dolor. Sed sit amet iaculis nisi. Mauris ridiculus elementum non felis etewe
-                  blandit. </p>
+                <p>
+                  Nullam ut consectetur dolor. Sed sit amet iaculis nisi. Mauris
+                  ridiculus elementum non felis etewe blandit.
+                </p>
               </div>
               <div class="team__promo-btn">
                 <button class="btn btn--black">Join the Club</button>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cover  -->
+    <section class="cover">
+      <div class="cover__content text-center">
+        <div class="cover__text text-uppercase">
+          <span>awesome parallax effect</span>
+          <h1>Art is knowing which ones to keep</h1>
+        </div>
+        <div class="cover__btn">
+          <button class="btn btn--yellow">Hang with us</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog  -->
+    <section class="blog">
+      <div class="container">
+        <div class="section__info">
+          <h2>lastest blog</h2>
+          <p>
+            Sed sit amet iaculis nisi. Mauris ridiculus elementum non felis
+            etewe blandit Pellentesque eu quam sem, ac malesuada leo sem quam
+            pellente.
+          </p>
+        </div>
+        <div class="blog__content row m-lg-0">
+          <div class="col-12 col-lg-6">
+            <div class="blog__photo">
+              <figure>
+                <img src="./imgs/blog.jpeg" alt="Post photo" />
+                <figcaption>We work together for fun</figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="blog__text">
+              <ul class="blog__tag">
+                <li>
+                  <a href="#">interface,</a>
+                </li>
+                <li>
+                  <a href="#">standard,</a>
+                </li>
+              </ul>
+              <h3 class="blog__title">
+                <a href="#">we work together for fun</a>
+              </h3>
+              <ul class="blog__info">
+                <li>
+                  <a href="#">martin smith</a>
+                </li>
+                <li>
+                  <a href="#"> july 29, 2015</a>
+                </li>
+              </ul>
+              <p>
+                Phasellus fringilla suscipit risus nec eleifend. Pellentesque eu
+                quam sem, ac malesuada leo sem quam pellente. Awesome sliders
+                give you the opportunity to showcase your content. fringilla
+                suscipit risus nec eleifend. Pellentesque eu quam sem, ac
+                malesuada leo sem quam pellente. Awesome sliders give you the
+                opportunity to showcase your content.
+              </p>
+              <a class="blog__read" href="#"
+                >Read More<i class="icon-arrows_slim_right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intro  -->
+    <section class="intro">
+      <div class="container">
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              id="pills-home-tab"
+              data-toggle="pill"
+              href="#pills-home"
+              role="tab"
+              aria-controls="pills-home"
+              aria-selected="true"
+            >
+              <i class="icon-mobile"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              id="pills-profile-tab"
+              data-toggle="pill"
+              href="#pills-profile"
+              role="tab"
+              aria-controls="pills-profile"
+              aria-selected="false"
+            >
+              <i class="icon-documents"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              id="pills-contact-tab"
+              data-toggle="pill"
+              href="#pills-huge"
+              role="tab"
+              aria-controls="pills-contact"
+              aria-selected="false"
+            >
+              <i class="icon-lightbulb"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              id="pills-home-tab"
+              data-toggle="pill"
+              href="#pills-sky"
+              role="tab"
+              aria-controls="pills-home"
+              aria-selected="true"
+            >
+              <i class="icon-circle-compass"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              id="pills-profile-tab"
+              data-toggle="pill"
+              href="#pills-shortcode"
+              role="tab"
+              aria-controls="pills-profile"
+              aria-selected="false"
+            >
+              <i class="icon-telescope"></i>
+            </a>
+          </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+          <div
+            class="tab-pane fade show active"
+            id="pills-home"
+            role="tabpanel"
+            aria-labelledby="pills-home-tab"
+          >
+            <div class="intro__title">
+              <p>full responsive</p>
+              <h3>we work together for fun</h3>
+            </div>
+            <p class="intro__paragraph">
+              In quis scelerisque velit. Proin pellentesque neque ut scelerisque
+              dapibus. Praesent elementum feugiat dignissim. Nunc placerat mi id
+              nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+              mattis, leo quam aliquet diam, congue laoreet elit metus eget
+              diam. Proin ac metus diam. In quis scelerisque velit. Proin
+              pellentesque neque ut scelerisque dapibus. Praesent elementum
+              feugiat dignissim. Nunc placerat mi id nisi interdum mollis.
+              Praesent pharetra, justo ut scelerisque mattis, leo quam aliquet
+              diam, congue laoreet elit metus eget diam. Proin ac metus diam.
+            </p>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="pills-profile"
+            role="tabpanel"
+            aria-labelledby="pills-profile-tab"
+          >
+            <div class="intro__title">
+              <p>work for fun</p>
+              <h3>massive ui collection</h3>
+            </div>
+            <p class="intro__paragraph">
+              Leo quam aliquet diam, congue laoreet elit metus eget diam. Proin
+              ac metus diam. In quis scelerisque velit. Proin pellentesque neque
+              ut scelerisque dapibus. Praesent elementum feugiat dignissim. Nunc
+              placerat mi id nisi interdum mollis. Praesent pharetra, justo ut
+              scelerisque mattis, leo quam aliquet diam, congue laoreet elit
+              metus eget diam. Proin ac metus diam. In quis scelerisque velit.
+              Proin pellentesque neque ut scelerisque dapibus. Praesent
+              elementum feugiat dignissim. Nunc placerat mi id nisi interdum
+              mollis.
+            </p>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="pills-huge"
+            role="tabpanel"
+            aria-labelledby="pills-contact-tab"
+          >
+            <div class="intro__title">
+              <p>multipurpose</p>
+              <h3>huge possibilities</h3>
+            </div>
+            <p class="intro__paragraph">
+              congue laoreet elit metus eget diam. Proin ac metus diam. In quis
+              scelerisque velit. Proin pellentesque neque ut scelerisque
+              dapibus. Praesent elementum feugiat dignissim. Nunc placerat mi id
+              nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+              mattis, leo quam aliquet diam, congue laoreet elit metus eget
+              diam. Proin ac metus diam. In quis scelerisque velit. Proin
+              pellentesque neque ut scelerisque dapibus. Praesent elementum
+              feugiat dignissim. Nunc placerat mi id nisi interdum mollis.
+            </p>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="pills-sky"
+            role="tabpanel"
+            aria-labelledby="pills-contact-tab"
+          >
+            <div class="intro__title">
+              <p>sky is the limit</p>
+              <h3>we work together for fun</h3>
+            </div>
+            <p class="intro__paragraph">
+              Proin ac metus diam. In quis scelerisque velit. Leo quam aliquet
+              diam, congue laoreet elit metus eget diam. Proin pellentesque
+              neque ut scelerisque dapibus. Praesent elementum feugiat
+              dignissim. Nunc placerat mi id nisi interdum mollis. Praesent
+              pharetra, justo ut scelerisque mattis, leo quam aliquet diam,
+              congue laoreet elit metus eget diam. Proin ac metus diam. In quis
+              scelerisque velit. Proin pellentesque neque ut scelerisque
+              dapibus. Praesent elementum feugiat dignissim. Nunc placerat mi id
+              nisi interdum mollis.
+            </p>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="pills-shortcode"
+            role="tabpanel"
+            aria-labelledby="pills-contact-tab"
+          >
+            <div class="intro__title">
+              <p>responsive</p>
+              <h3>unlimited shortcode</h3>
+            </div>
+            <p class="intro__paragraph">
+              Kusto ut scelerisque mattis, leo quam aliquet diam, congue laoreet
+              elit metus eget diam. Proin ac metus diam. In quis scelerisque
+              velit. Proin pellentesque neque ut scelerisque dapibus. Praesent
+              elementum feugiat dignissim. Nunc placerat mi id nisi interdum
+              mollis. Praesent pharetra, justo ut scelerisque mattis, leo quam
+              aliquet diam, congue laoreet elit metus eget diam. Proin ac metus
+              diam. In quis scelerisque velit. Proin pellentesque neque ut
+              scelerisque dapibus. Praesent elementum feugiat dignissim. Nunc
+              placerat mi id nisi interdum mollis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Number  -->
+    <section class="numbers">
+      <div class="container">
+        <div class="numbers__content row">
+          <div class="col-12 col-lg-3">
+            <div class="numbers__item">
+              <i class="icon-layers"></i>
+              <span class="counter">40</span>
+              <h3>HTML multipage</h3>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3">
+            <div class="numbers__item">
+              <i class="icon-computer_imac_slim"></i>
+              <span class="counter">30</span>
+              <h3>One page demo</h3>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3">
+            <div class="numbers__item">
+              <i class="icon-database"></i>
+              <span class="counter">87</span>
+              <h3>usefull shortcode</h3>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3">
+            <div class="numbers__item">
+              <i class="icon-linegraph"></i>
+              <span class="counter">17</span>
+              <h3>Different Category</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feedback  -->
+    <section class="feedback">
+      <div class="container">
+        <div class="feedback__content">
+          <div
+            class="feedback___carousel owl-carousel owl-theme owl-loaded owl-drag"
+          >
+            <div class="owl-stage-outer">
+              <div
+                class="owl-stage"
+                style="
+                  transform: translate3d(-2160px, 0px, 0px);
+                  transition: all 0.8s ease 0s;
+                  width: 5040px;
+                "
+              >
+                <div class="owl-item cloned" style="width: 720px">
+                  <div class="feedback__item item">
+                    <div class="feedback__thumb">
+                      <img src="./imgs/thumb.png" alt="User's thumb" />
+                    </div>
+                    <div class="feedback__comment">
+                      <p>
+                        Vestibulum varius fermentum risus vitae lacinia neque
+                        auctor nec. Nunc ac rutrum nulla. Nulla maximus dolor in
+                        quam euismod ac viverra libero aliquet.
+                      </p>
+                    </div>
+                    <div class="feedback__user">
+                      <p>- John Doe -</p>
+                      <p>head of marketing, TB</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="owl-item cloned" style="width: 720px">
+                  <div class="feedback__item item">
+                    <div class="feedback__thumb">
+                      <img src="./imgs/thumb.png" alt="User's thumb" />
+                    </div>
+                    <div class="feedback__comment">
+                      <p>
+                        Vestibulum varius fermentum risus vitae lacinia neque
+                        auctor nec. Nunc ac rutrum nulla. Nulla maximus dolor in
+                        quam euismod ac viverra libero aliquet.
+                      </p>
+                    </div>
+                    <div class="feedback__user">
+                      <p>- Linda Smith -</p>
+                      <p>ceo tb</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="owl-item" style="width: 720px">
+                  <div class="feedback__item item">
+                    <div class="feedback__thumb">
+                      <img src="./imgs/thumb.png" alt="User's thumb" />
+                    </div>
+                    <div class="feedback__comment">
+                      <p>
+                        Nam nec dui dolor. Curabitur in laoreet erat. Nam nec
+                        dui dolor. Aliquam varius dolor nunc, interdum commodo
+                        justoporttitor vitae. Quisque fermentum purus.
+                      </p>
+                    </div>
+                    <div class="feedback__user">
+                      <p>- Kevin Paige -</p>
+                      <p>abc</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="owl-item active" style="width: 720px">
+                  <div class="feedback__item item">
+                    <div class="feedback__thumb">
+                      <img src="./imgs/thumb.png" alt="User's thumb" />
+                    </div>
+                    <div class="feedback__comment">
+                      <p>
+                        Vestibulum varius fermentum risus vitae lacinia neque
+                        auctor nec. Nunc ac rutrum nulla. Nulla maximus dolor in
+                        quam euismod ac viverra libero aliquet.
+                      </p>
+                    </div>
+                    <div class="feedback__user">
+                      <p>- John Doe -</p>
+                      <p>head of marketing, TB</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="owl-item" style="width: 720px">
+                  <div class="feedback__item item">
+                    <div class="feedback__thumb">
+                      <img src="./imgs/thumb.png" alt="User's thumb" />
+                    </div>
+                    <div class="feedback__comment">
+                      <p>
+                        Vestibulum varius fermentum risus vitae lacinia neque
+                        auctor nec. Nunc ac rutrum nulla. Nulla maximus dolor in
+                        quam euismod ac viverra libero aliquet.
+                      </p>
+                    </div>
+                    <div class="feedback__user">
+                      <p>- Linda Smith -</p>
+                      <p>ceo tb</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="owl-item cloned" style="width: 720px">
+                  <div class="feedback__item item">
+                    <div class="feedback__thumb">
+                      <img src="./imgs/thumb.png" alt="User's thumb" />
+                    </div>
+                    <div class="feedback__comment">
+                      <p>
+                        Nam nec dui dolor. Curabitur in laoreet erat. Nam nec
+                        dui dolor. Aliquam varius dolor nunc, interdum commodo
+                        justoporttitor vitae. Quisque fermentum purus.
+                      </p>
+                    </div>
+                    <div class="feedback__user">
+                      <p>- Kevin Paige -</p>
+                      <p>abc</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="owl-item cloned" style="width: 720px">
+                  <div class="feedback__item item">
+                    <div class="feedback__thumb">
+                      <img src="./imgs/thumb.png" alt="User's thumb" />
+                    </div>
+                    <div class="feedback__comment">
+                      <p>
+                        Vestibulum varius fermentum risus vitae lacinia neque
+                        auctor nec. Nunc ac rutrum nulla. Nulla maximus dolor in
+                        quam euismod ac viverra libero aliquet.
+                      </p>
+                    </div>
+                    <div class="feedback__user">
+                      <p>- John Doe -</p>
+                      <p>head of marketing, TB</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="owl-nav disabled">
+              <button type="button" role="presentation" class="owl-prev">
+                <span aria-label="Previous">‹</span></button
+              ><button type="button" role="presentation" class="owl-next">
+                <span aria-label="Next">›</span>
+              </button>
+            </div>
+            <div class="owl-dots">
+              <button role="button" class="owl-dot"><span></span></button
+              ><button role="button" class="owl-dot active">
+                <span></span></button
+              ><button role="button" class="owl-dot"><span></span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partner  -->
+    <section class="partners">
+      <div class="container">
+        <div class="partners__content">
+          <div
+            class="partners___carousel owl-carousel owl-theme owl-loaded owl-drag"
+          >
+            <div class="owl-stage-outer">
+              <div
+                class="owl-stage"
+                style="
+                  transform: translate3d(0px, 0px, 0px);
+                  transition: all 0s ease 0s;
+                  width: 1110px;
+                "
+              >
+                <div class="owl-item active" style="width: 185px">
+                  <div class="partners__item item">
+                    <img src="./imgs/partner-1.png" alt="Partner 1" />
+                  </div>
+                </div>
+                <div class="owl-item active" style="width: 185px">
+                  <div class="partners__item item">
+                    <img src="./imgs/partner-2.png" alt="Partner 2" />
+                  </div>
+                </div>
+                <div class="owl-item active" style="width: 185px">
+                  <div class="partners__item item">
+                    <img src="./imgs/partner-3.png" alt="Partner 3" />
+                  </div>
+                </div>
+                <div class="owl-item active" style="width: 185px">
+                  <div class="partners__item item">
+                    <img src="./imgs/partner-4.png" alt="Partner 4" />
+                  </div>
+                </div>
+                <div class="owl-item active" style="width: 185px">
+                  <div class="partners__item item">
+                    <img src="./imgs/partner-5.png" alt="Partner 5" />
+                  </div>
+                </div>
+                <div class="owl-item active" style="width: 185px">
+                  <div class="partners__item item">
+                    <img src="./imgs/partner-6.png" alt="Partner 6" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="owl-nav disabled">
+              <button type="button" role="presentation" class="owl-prev">
+                <span aria-label="Previous">‹</span></button
+              ><button type="button" role="presentation" class="owl-next">
+                <span aria-label="Next">›</span>
+              </button>
+            </div>
+            <div class="owl-dots disabled">
+              <button role="button" class="owl-dot active">
+                <span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer  -->
+    <footer>
+      <div class="container">
+        <div class="footer__content row">
+          <div class="col-12 col-lg-3">
+            <div class="footer__item">
+              <a class="footer__logo" href="#">
+                <img src="./imgs/massive-logo.png" alt="Massive logo" />
+              </a>
+              <p class="footer__des">
+                Massive is fully responsible, Performance oriented and SEO
+                optimized theme.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3">
+            <div class="footer__item">
+              <h3 class="footer__title">recent posts</h3>
+              <ul class="footer__list">
+                <li>
+                  <a href="#">standard blog post</a>
+                </li>
+                <li>
+                  <a href="#">quotation post</a>
+                </li>
+                <li>
+                  <a href="#">audio post</a>
+                </li>
+                <li>
+                  <a href="#">massive video demo</a>
+                </li>
+                <li>
+                  <a href="#">blog image post</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3">
+            <div class="footer__item">
+              <h3 class="footer__title">follow us</h3>
+              <ul class="footer__list">
+                <li>
+                  <a href="#">about massive</a>
+                </li>
+                <li>
+                  <a href="#">career</a>
+                </li>
+                <li>
+                  <a href="#">terms &amp; condition</a>
+                </li>
+                <li>
+                  <a href="#">privacy policy</a>
+                </li>
+                <li>
+                  <a href="#">contact us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3">
+            <div class="footer__item">
+              <h3 class="footer__title">recent work</h3>
+              <ul class="footer__work">
+                <li>
+                  <a class="footer__photo" href="#">
+                    <img
+                      src="./imgs/footer-photo-1.jpeg"
+                      alt="Footer photo 1"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a class="footer__photo" href="#">
+                    <img
+                      src="./imgs/footer-photo-2.jpeg"
+                      alt="Footer photo 2"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a class="footer__photo" href="#">
+                    <img
+                      src="./imgs/footer-photo-3.jpeg"
+                      alt="Footer photo 3"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a class="footer__photo" href="#">
+                    <img
+                      src="./imgs/footer-photo-4.jpeg"
+                      alt="Footer photo 4"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a class="footer__photo" href="#">
+                    <img
+                      src="./imgs/footer-photo-5.jpeg"
+                      alt="Footer photo 5"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a class="footer__photo" href="#">
+                    <img
+                      src="./imgs/footer-photo-6.jpeg"
+                      alt="Footer photo 6"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a class="footer__photo" href="#">
+                    <img
+                      src="./imgs/footer-photo-7.jpeg"
+                      alt="Footer photo 7"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a class="footer__photo" href="#">
+                    <img
+                      src="./imgs/footer-photo-8.jpeg"
+                      alt="Footer photo 8"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a class="footer__photo" href="#">
+                    <img
+                      src="./imgs/footer-photo-9.jpeg"
+                      alt="Footer photo 9"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Copyright -->
+    <section class="copyright">
+      <div class="container">
+        <div class="copyright__content row">
+          <div class="col-12 col-lg-6">
+            <div class="copyright__text">
+              <p>Copyright 2023 Massive Theme | All Rights Reserved</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="copyright__social">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-dribbble"></i></a>
+              <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+              <a href="#"><i class="fab fa-behance"></i></a>
             </div>
           </div>
         </div>
@@ -569,6 +1270,22 @@
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"
     ></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"
+      integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
       integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
@@ -579,8 +1296,13 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-    <script src="js/main.js"></script>
-    
-    
+
+    <!-- Owl carousel  -->
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/jquery.countup.js"></script>
+    <script src="./js/jquery.isotope.js"></script>
+    <script src="./js/jquery.magniflic-popup.min.js"></script>
+
+    <script src="./js/main.js"></script>
   </body>
 </html>

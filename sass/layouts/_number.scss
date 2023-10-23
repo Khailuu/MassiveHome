@@ -1,0 +1,20 @@
+.numbers {
+    background-color: $clr-num-bg;
+    color: $clr-dark-bg-txt;
+    .numbers__content {
+        text-align: center;
+        i {
+            font-size: $fs-intro-i;
+            margin-right: $m-3;
+        }
+        span {
+            font-size: $fs-intro-i;
+            
+        }
+        h3 {
+            @include textStyle3($fs-def, $clr-dark-bg-txt, $lh-def, $ls-0, $fw-def);
+            text-transform: uppercase;
+            margin-top: $m-3;
+        }
+    }
+}

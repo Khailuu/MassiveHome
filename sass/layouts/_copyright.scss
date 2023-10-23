@@ -1,0 +1,27 @@
+.copyright {
+    padding: 35px 0;
+    background-color: $clr-num-bg;
+    color: $cLr-def-txt;
+    .copyright__content {
+        align-items: center;
+        p {
+            margin-bottom: 0;
+            color: $clr-copy-txt;
+            font-size: $fs-def;
+        }
+        .copyright__social {
+            display:flex;
+            justify-content: flex-end;
+            a {
+                color: $clr-copy-icon-bdr;
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                border: 1px solid $clr-copy-icon-bdr;
+                text-align: center;
+                line-height: $lh-1;
+                margin-left: 15px;
+            }
+        }
+    }
+}

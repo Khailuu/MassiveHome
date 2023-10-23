@@ -16,3 +16,26 @@
     color: $clr;
     line-height: $lh;
 }
+@mixin textStyle3($fs, $clr, $lh, $ls, $fw)
+{
+    font-size: $fs;
+    color: $clr;
+    line-height: $lh;
+    letter-spacing: $ls;
+    font-weight: $fw;
+    text-transform: uppercase;
+}
+@mixin textStyle4($fs, $clr, $ls){
+    font-size: $fs;
+    color: $clr;
+    letter-spacing: $ls;
+    text-transform: uppercase;
+}
+@mixin textStyle5($fs, $clr, $ls, $fw)
+{
+    font-size: $fs;
+    color: $clr;
+    letter-spacing: $ls;
+    font-weight: $fw;
+    text-transform: uppercase;
+}

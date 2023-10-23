@@ -1,10 +1,15 @@
 header {
+    position: sticky;
+    z-index: 999;
+    top: 0;
+    left: 0;
     .header {
         display: flex;
         background-color: $clr-nav-bg-mob;
         justify-content: space-between;
         padding: 0 $fs-1 + 4px;
         align-items: center;
+
         .header__logo {
             img {
                 height: $fs-3 + 36px;
@@ -21,7 +26,7 @@ header {
                         padding: 0 $p-4;
                         font-size: $fs-nav;
                         text-transform: uppercase;
-                        transition: all .5s;
+                        transition: all 0.5s;
                     }
                     &:hover a {
                         color: $clr-second;
@@ -31,6 +36,18 @@ header {
                         .active {
                             color: $clr-second;
                         }
+                    }
+                    i {
+                        margin-right: $m-1;
+                    }
+                }
+                .nav-divider {
+                    padding: 0 $p-4;
+                    p {
+                        color: $clr-dark-bg-txt;
+                        font-size: $fs-nav;
+                        text-align: center;
+                        margin-bottom: 0;
                     }
                 }
             }
